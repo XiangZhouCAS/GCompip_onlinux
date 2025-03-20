@@ -1,6 +1,7 @@
 chmod +x gcompip
 chmod +x ./bins/com
 chmod +x ./bins/custom
+chmod +x ./bins/download.r
 comts_path=$(dirname "$(readlink -f "$0")")
 echo 'export PATH="$PATH:'"$comts_path"'"' >> ~/.bashrc
 bins_dir=$comts_path/$(echo bins)
