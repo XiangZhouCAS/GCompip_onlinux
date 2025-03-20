@@ -1,0 +1,21 @@
+R_SCRIPTS_DIR=/data/wanglab/zhoux/R/communitytools/comts/bins
+script_type="$1"
+shift
+if [ $# -eq 0 ]; then
+    set -- "-h"
+fi
+case "$script_type" in
+    diy)
+        Rscript "$R_SCRIPTS_DIR/diamond_community.r" "$@"
+        ;;
+    ter)
+        Rscript "$R_SCRIPTS_DIR/ter.diamond_community.r" "$@"
+        ;;
+    hyd)
+        Rscript "$R_SCRIPTS_DIR/hyd.diamond_community.r" "$@"
+        ;;
+    *)
+        Rscript "$R_SCRIPTS_DIR/comts_custom.help.r" "$@"
+        exit 1
+        ;;
+esac

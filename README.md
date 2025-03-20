@@ -1,5 +1,5 @@
-# GCompip
-## GCompip: A pipeline for calculating single-copy genes’ community abundance in metagenome.
+# comts
+## Comts: A pipeline for calculating single-copy genes’ community abundance in metagenome
 ## Introduction
 Gene abundance in metagenome datasets is commonly represented in terms of Reads Per Kilobase per Million Reads (RPKM), Fragments Per Kilobase per Million (FPKM) and Transcripts Per Million (TPM). However, the gene abundance in microbial community (GAM,%), defined as the proportion of microorganisms containing the gene to the overall population, remains underexplored and lacks a standardized methodology for estimation. In this study, we introduce Comts, a comprehensive framework for estimating GAM, and present a robust, user-friendly and efficient computational pipeline designed to calculate GAM from metagenomic sequencing data. The developed pipeline makes it accessible to researchers seeking to evaluate the metabolic capabilities of microbial communities, particularly for single-copy genes with specific metabolic function.
 ## The formula
@@ -20,9 +20,8 @@ GAM =  (RSCG×100%)/MRUSCG
 ### Download throught `git clone` :
 `git clone https://github.com/XiangZhouCAS/comts.git`
 ### Installation
-1. `cd  comts`
-2. `sh ./install.sh`
-3. `source ~/.bashrc`
+1. `sh ./install.sh`
+2. `source ~/.bashrc`
 ### DataBase
 Ribo_14.dmnd  
 hyddb_all.dmnd (Søndergaard, D., Pedersen, C. & Greening, C. HydDB: A web tool for hydrogenase classification and analysis. Sci Rep 6, 34212 (2016). https://doi.org/10.1038/srep34212)  
@@ -139,3 +138,4 @@ comts custom ter -i sample1.1.fastq.gz -o sample1 -t 4 -d terminal_genes.dmnd -s
 ```
 comts custom hyd -i sample1.1.fastq.gz -o sample1 -t 4 -d hyddb.all.dmnd -s Ribo_14.dmnd -c hyd_id-name.script
 ```
+
