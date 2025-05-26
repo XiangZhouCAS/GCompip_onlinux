@@ -1,0 +1,18 @@
+R_SCRIPTS_DIR=/data/wanglab/zhoux/R/communitytools/comts/bins
+script_type="$1"
+shift
+if [ $# -eq 0 ]; then
+    set -- "-h"
+fi
+case "$script_type" in
+    uscg)
+        Rscript "$R_SCRIPTS_DIR/uscg_rpkm.r" "$@"
+        ;;
+    res)
+        Rscript "$R_SCRIPTS_DIR/uscg_rpkm2com.r" "$@"
+        ;;
+    *)
+        Rscript "$R_SCRIPTS_DIR/comts_rpkm.help.r" "$@"
+        exit 1
+        ;;
+esac

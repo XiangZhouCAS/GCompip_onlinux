@@ -1,0 +1,40 @@
+package:
+  name: gcompip
+  version: 0.99.0
+source:
+  path: /data/wanglab/zhoux/R/communitytools/comts
+build:
+   script_env:
+     - activate.sh
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - {{ compiler('fortran') }}
+    - numpy >=1.23,<1.24
+  host:
+    - bioconda::fastq
+    - bioconda::seqkit
+    - bioconda::diamond
+    - r-tidyverse
+    - r-optparse
+    - numpy >=1.23,<1.24
+  run:
+    - bioconda::fastq
+    - bioconda::seqkit
+    - bioconda::diamond
+    - r-tidyverse
+    - r-optparse
+    - numpy >=1.23,<1.24
+
+about:
+  summary: "GCompip: A pipeline for calculating single-copy genes’ community abundance in metagenome"
+  description: |
+    This package installs the following bioinformatics tools:
+    - Fastq: A tool for working with FASTQ files.
+    - Seqkit: A fast and powerful toolkit for processing biological sequences.
+    - DIAMOND: A fast and sensitive alignment tool for biological sequences.
+  homepage: https://github.com/XiangZhouCAS/GCompip
+extra:
+  copy_test_source_files: true
+  final: true
