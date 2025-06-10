@@ -1,5 +1,4 @@
-# GCompip
-## GCompip: A pipeline for estimating the gene abundance in microbial communities
+![logo](Logo.png)
 ## Introduction
 Gene abundance in metagenome datasets is commonly represented in terms of Reads Per Kilobase per Million Reads (RPKM), Fragments Per Kilobase per Million (FPKM) and Transcripts Per Million (TPM). However, the gene abundance in microbial community (GAM,%), defined as the proportion of microorganisms containing the gene to the overall population, remains underexplored and lacks a standardized methodology for estimation. In this study, we introduce Comts, a comprehensive framework for estimating GAM, and present a robust, user-friendly and efficient computational pipeline designed to calculate GAM from metagenomic sequencing data. The developed pipeline makes it accessible to researchers seeking to evaluate the metabolic capabilities of microbial communities, particularly for single-copy genes with specific metabolic function.
 ## The formula
