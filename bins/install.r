@@ -25,5 +25,5 @@ if (!require(data.table)) {
   library(data.table)}
 if(!require(ggplot2)){
   install.packages("ggplot2")
-  library(ggplt2)
+  library(ggplot2)
 }else{library(ggplot2)}
