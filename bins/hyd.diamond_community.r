@@ -215,6 +215,7 @@ tmp <- read.table("all.abd.txt",header = T,sep = "\t")
 rpkm <- pivot_wider(tmp,id_cols = gene,
               values_from = "RPKM",
               names_from = "sample_name")
+rpkm <- as.data.frame(rpkm)
 rpkm[is.na(rpkm)] <- 0
 write.table(rpkm,"rpkm.abd.txt",
                     sep = "\t",
