@@ -225,6 +225,7 @@ com <- tmp%>%
   pivot_wider(id_cols = gene,
               values_from = "GAM",
               names_from = "sample_name")
+com <- as.data.frame(com)
 com[is.na(com)] <- 0
 com <- com[!duplicated(com[,c(1,2)]),]
 write.table(com,"GAM.abd.txt",
