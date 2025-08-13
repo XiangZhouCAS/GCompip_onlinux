@@ -16,8 +16,8 @@ option_list <- list(
               help = "Please specify the directory for universal single-copy genes database (e.g., 'Ribo_14.dmnd'). If you have already calculated the RPKM for these genes, you may instead specify the directory for the results (e.g., 'sample_name.USCG.hits.txt') to skip this step."),
   make_option(c("--skip_fastp","-s"),action = "store_true", default = F,
               help = "If you have already filtered the reads, you can set this parameter to skip running fastp. The default is to run fastp."),
-  make_option(c("--min_length","-m"),type = "numeric",default = 75,
-	      help = "Set the minimum length required for filtering reads, the default is 75."),
+  make_option(c("--min_length","-m"),type = "numeric",default = 50,
+	      help = "Set the minimum length required for filtering reads, the default is 50."),
   make_option(c("--run_seqkit","-k"),type = "character",default = "run",
 	      help = "If you have already counted the total number of reads using seqkit, you can specify the directory of the seqkit results (e.g., 'sample_name.all.reads.txt') to skip running seqkit. By default, seqkit will be executed."),
   make_option(c("--keep_samples","-e"), action = "store_true", default = F,
@@ -257,3 +257,4 @@ w <- length(unique(samplept$sample))
 h <- length(unique(samplept$gene))
 ggsave(plot = hp,"Heatmap_GAM.pdf",width = w,height = h/4)
 print("All Completed!")
+
