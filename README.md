@@ -42,7 +42,7 @@ ter.dmnd.gz ([Hydrogen metabolism terminal enzyme's database providede by Greeni
 |`--threads` `-t`|Set the threads of CPU,default is 1.|
 |`--UCSG_db` `-u`|Set the directory of universal single copy genes (USCGs) database.|
 |`--skip_fastp` `-s`|If you have already filtered the reads, you can set this parameter to skip running fastp. The default is to run fastp.|
-|`--min_length` `-m`|Set the minimum length required for filtering reads, the default is 100, but it is recommended to set this parameter to 140 if hydrogenases or hydrogen metabolism terminal enzymes are to be calculated.|
+|`--min_length` `-m`|Set the minimum length required for filtering reads, the default is 50, but it is recommended to set this parameter to 140 if hydrogenases or hydrogen metabolism terminal enzymes are to be calculated.|
 |`--run_seqkit` `-k`|If you have already counted the total number of reads using seqkit, you can specify the directory of the seqkit results (e.g., 'sample_name.all.reads.txt') to skip running seqkit. By default, seqkit will be executed.|
 |`--keep_samples` `-e`|By default, the temporary results will be deleted unless this parameter is setted.|
 |`--help` `-h`|Show the help message and exit.|
@@ -77,7 +77,7 @@ comts geneset res -i geneset.rpkm.txt -r Ribo.rpkm.txt -o community.abd.txt
 |`--diamond_db` `-d`|Set the directory of universal single copy genes (USCGs) database.|
 |`--UCSG_db` `-u`|Please specify the directory for universal single-copy genes database (e.g., 'Ribo_14.dmnd'). If you have already calculated the RPKM for these genes, you may instead specify the directory for the results (e.g., 'sample_name.UCSG.hits.txt') to skip this step.|
 |`--skip_fastp` `-s`|If you have already filtered the reads, you can set this parameter to skip running fastp. The default is to run fastp.|
-|`--min_length` `-m`|Set the minimum length required for filtering reads, the default is 100, but it is recommended to set this parameter to 140 if hydrogenases or hydrogen metabolism terminal enzymes are to be calculated.|
+|`--min_length` `-m`|Set the minimum length required for filtering reads, the default is 50, but it is recommended to set this parameter to 140 if hydrogenases or hydrogen metabolism terminal enzymes are to be calculated.|
 |`--run_seqkit` `-k`|If you have already counted the total number of reads using seqkit, you can specify the directory of the seqkit results (e.g., 'sample_name.all.reads.txt') to skip running seqkit. By default, seqkit will be executed.|
 |`--filter_condition` `-l`|Please specify the filter_condition file. By default, the identity is set to 50 and the coverage to 80.|
 |`--keep_samples` `-e`|By default, the temporary results will be deleted unless this parameter is setted.|
@@ -107,7 +107,7 @@ filter condition file demo:
 |`--diamond_db` `-d`|Set the directory of universal single copy genes (USCGs) database.|
 |`--UCSG_db` `-u`|Please specify the directory for universal single-copy genes database (e.g., 'Ribo_14.dmnd'). If you have already calculated the RPKM for these genes, you may instead specify the directory for the results (e.g., 'sample_name.UCSG.hits.txt') to skip this step.|
 |`--skip_fastp` `-s`|If you have already filtered the reads, you can set this parameter to skip running fastp. The default is to run fastp.|
-|`--min_length` `-m`|Set the minimum length required for filtering reads, the default is 100, but it is recommended to set this parameter to 140 if hydrogenases or hydrogen metabolism terminal enzymes are to be calculated.|
+|`--min_length` `-m`|Set the minimum length required for filtering reads, the default is 50, but it is recommended to set this parameter to 140 if hydrogenases or hydrogen metabolism terminal enzymes are to be calculated.|
 |`--run_seqkit` `-k`|If you have already counted the total number of reads using seqkit, you can specify the directory of the seqkit results (e.g., 'sample_name.all.reads.txt') to skip running seqkit. By default, seqkit will be executed.|
 |`--keep_samples` `-e`|By default, the temporary results will be deleted unless this parameter is setted.|
 |`--help` `-h`|Show the help message and exit.|
@@ -128,7 +128,7 @@ comts custom ter -i sample1.1.fastq.gz -o sample1 -t 4 -d terminal_genes.dmnd -s
 |`--UCSG_db` `-u`|Please specify the directory for universal single-copy genes database (e.g., 'Ribo_14.dmnd'). If you have already calculated the RPKM for these genes, you may instead specify the directory for the results (e.g., 'sample_name.UCSG.hits.txt') to skip this step.|
 |`--script` `-c`|Please set the directory of hyd_id-name.script.|
 |`--skip_fastp` `-s`|If you have already filtered the reads, you can set this parameter to skip running fastp. The default is to run fastp.|
-|`--min_length` `-m`|Set the minimum length required for filtering reads, the default is 100, but it is recommended to set this parameter to 140 if hydrogenases or hydrogen metabolism terminal enzymes are to be calculated.|
+|`--min_length` `-m`|Set the minimum length required for filtering reads, the default is 50, but it is recommended to set this parameter to 140 if hydrogenases or hydrogen metabolism terminal enzymes are to be calculated.|
 |`--run_seqkit` `-k`|If you have already counted the total number of reads using seqkit, you can specify the directory of the seqkit results (e.g., 'sample_name.all.reads.txt') to skip running seqkit. By default, seqkit will be executed.|
 |`--keep_samples` `-e`|By default, the temporary results will be deleted unless this parameter is setted.|
 |`--help` `-h`|Show the help message and exit.|
