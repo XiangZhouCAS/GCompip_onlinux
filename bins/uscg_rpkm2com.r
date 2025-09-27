@@ -44,7 +44,5 @@ df <- data.frame(lapply(geneset[,-1],
                         function(x)ifelse(x > 100, 100, x)),check.names = F)
 res <- basename(output)
 colnames(geneset)[1] <- "GeneID"
-df$GeneID <- geneset$GeneID
-df$GeneID <- geneset$GeneID
-df <- df[,c(ncol(df),1:ncol(df)-1)]
+df <- geneset[,c(ncol(geneset),1:ncol(geneset)-1)]
 write.table(df,res,sep = "\t",quote = F,row.names = F)
