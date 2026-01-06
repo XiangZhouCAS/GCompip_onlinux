@@ -253,5 +253,5 @@ hp <- ggplot(samplept,aes(sample,gene))+
         axis.ticks.y = element_line(color = "black"))
 w <- length(unique(samplept$sample))
 h <- length(unique(samplept$gene))
-ggsave(plot = hp,"Heatmap_GAM.pdf",width = w,height = h/4)
+ggsave(plot = hp,"Heatmap_GAM.pdf",width = w,height = h/4,limitsize = F)
 print("All Completed!")
